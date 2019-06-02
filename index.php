@@ -1,7 +1,19 @@
 <?php
 
 
+//connect to database
+require'/home2/tluugree/config-car.php';
 
+try {
+    //instantiate a database object
+    $dbh = new PDO(DB_DSN,DB_USERNAME,DB_PASSWORD);
+    //echo '<h1>Connect!</h1>';
+}
+
+catch (PDOException $e) {
+    echo $e->getMessage();
+    return;
+}
 //Turn on error reporting
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
@@ -28,14 +40,25 @@ $f3->route('GET /fleet', function ()
     echo $view->render( 'views/fleet.html');
 
 });
-//fix
-$f3->route('GET | contact', function ()
+
+//confirmation
+$f3->route('GET|POST /confirmation', function ()
 {
     $view=new Template();
-    echo $view->render( 'views/contact.html');
-
+    echo $view->render( 'views/confirmation.html');
 
 });
+
+
+
+//fix
+//$f3->route('GET | contact', function ()
+//{
+//    $view=new Template();
+//    echo $view->render( 'views/contact.html');
+//
+//
+//});
 
 
 
