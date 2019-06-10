@@ -21,20 +21,27 @@
 <nav class ="navbar navbar-inverse">
     <ul class="nav navbar-nav">
         <li class="nav-item">
-                <a class="nav-link active" href="../finalproject">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="fleet">Our Fleet</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="admin">Admin</a>
-            </li>
+            <center><a class="nav-link active" href="../finalproject">
+            <h1><font color="gray">Exotic Car Rental</font></h1></a></center>
+       </li>
+        <li class="nav-item">
+            <center><a class="nav-link active" href="../finalproject">
+            <h3><font color="gray">Home</font></h3></a></center>
+        </li>
+        <li class="nav-item">
+            <center><a class="nav-link" href="fleet">
+            <h3><font color="gray">Our Fleet</font></h3></a></center>
+        </li>
+        <li class="nav-item">
+            <center><a class="nav-link" href="contact">
+            <h3><font color="gray">Contact</font></h3></a></center>
+        </li>
+        <li class="nav-item">
+            <center><a class="nav-link " href="admin">
+            <h3><font color="gray">Admin</font></h3></a></center>
+        </li>
     </ul>
 </nav>
-
 <body>
 
 <!--Pop-up for details-->
