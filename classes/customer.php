@@ -1,5 +1,12 @@
 <?php
 /**
+Final project
+Exotic Car Rental
+Customer class
+Authors: Trang + David
+ */
+
+/**
  * Class customer
  */
 class Customer
