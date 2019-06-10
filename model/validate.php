@@ -21,7 +21,7 @@ function validEmail($email)
     return filter_var($email);
 }
 
-//form
+//form- customer reservation validation
 function form()
 {
     global $f3;
