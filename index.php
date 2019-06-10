@@ -1,4 +1,10 @@
 <?php
+/*
+Final project
+Exotic Car Rental
+Index Page
+Authors: Trang + David*/
+
 require_once('vendor/autoload.php');
 session_start();
 
@@ -97,12 +103,27 @@ $f3->route('GET|POST /admin', function($f3)
     session_destroy();
 });
 
+//car detail
+$f3->route('GET /detail/@car_id', function($f3, $params){
+    global $db;
+
+    $car_id = $params['car_id'];
+    $detail = $db->getDetails($car_id);
+
+    $f3->set('detail', $detail);
+
+    $view = new Template();
+    echo $view->render('views/car.html');
+
+});
+
 //contact
 $f3 ->route('GET|POST /contact', function() {
     $view = new Template();
     echo $view ->render('views/contact.html');
     session_destroy();
 });
+
 
 //Run fat free F3
 $f3->run();
