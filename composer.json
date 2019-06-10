@@ -1,7 +1,7 @@
 
 {
 
-  "name" : "tluu9/IT328/pets",
+  "name" : "tluu9/IT328/finalproject",
   "authors" :
   [
     {
@@ -16,5 +16,9 @@
   "require" :
   {
     "bcosca/fatfree-core" : "dev-master"
+  },
+  "autoload":
+  {
+    "classmap": ["classes/","model/"]
   }
 }
