@@ -91,18 +91,23 @@ class Database
         return $row;
     }
 
-    function getConfirmation($customer_id)
+    function getDetail($car_id)
     {
         //1.Define the query
-        $sql = "SELECT * FROM customer WHERE customer_id = :customer_id";
+        $sql = "SELECT * FROM car 
+                WHERE car_id = :car_id";
+
         //2.Prepare the statement
         $statement = $this->_dbh->prepare($sql);
+
         //3.Bind the parameters
-        $statement->bindParam(':customer_id', $customer_id, PDO::PARAM_STR);
+        $statement->bindParam(':car_id', $car_id ,PDO::PARAM_STR);
+
         //4.Execute the statement
         $statement->execute();
-        //5.Return the result
-        $row = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        //5.Return the result: Use fetch for single line and fetchAll for all lines in return
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
         return $row;
     }
 }
