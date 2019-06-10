@@ -2,35 +2,56 @@
 /**
  * Class customer
  */
-class Member
+class Customer
 {
     /**
-     * @var fname, lname, age, phone, email
+     * @var fname, lname, age, phone, email, pickup, dropoff
      */
     //declare attribute
+    private $_car_id;
     private $_fname;
     private $_lname;
-    private $_age;
-    private $_phone;
     private $_email;
+    private $_phone;
+    private $_pick_up;
+    private $_drop_off;
+    private $_age;
+
     /**
-     * Member constructor.
+     * Customer constructor.
      * @param $fname
      * @param $lname
      * @param $age
      * @param $email
      * @param $phone
+     * @param $pick_up
+     * @param $drop_off
      */
     //parameterized constructor
-    function __construct($fname, $lname, $age, $email, $phone)
+    function __construct($car_id,$fname, $lname,  $email, $phone,$pick_up,$drop_off, $age)
     {
+        $this->_car_id = $car_id;
         $this->_fname = $fname;
         $this->_lname = $lname;
-        $this->_age = $age;
         $this->_email = $email;
         $this->_phone = $phone;
+        $this->_pick_up = $pick_up;
+        $this->_drop_off = $drop_off;
+        $this->_age = $age;
     }
     //Setter and getter
+
+    /**
+     * @return car_id
+     */
+    public function getCar_id()
+    {
+        return $this->_car_id;
+    }
+    public function setCar_id($car_id)
+    {
+        $this->_car_id = $car_id;
+    }
     /**
      * @return first name String
      */
@@ -53,28 +74,7 @@ class Member
     {
         $this->_lname = $lname;
     }
-    /**
-     * @return age integer
-     */
-    public function getAge()
-    {
-        return $this->_age;
-    }
-    public function setAge($age)
-    {
-        $this->_age = $age;
-    }
-    /**
-     * @return phone number integer
-     */
-    public function getPhone()
-    {
-        return $this->_phone;
-    }
-    public function setPhone($phone)
-    {
-        $this->_phone = $phone;
-    }
+
     /**
      * @return email
      */
@@ -86,4 +86,53 @@ class Member
     {
         $this->_email = $email;
     }
+
+    /**
+     * @return phone number integer
+     */
+    public function getPhone()
+    {
+        return $this->_phone;
+    }
+    public function setPhone($phone)
+    {
+        $this->_phone = $phone;
+    }
+
+    /**
+     * @return pickup date
+     */
+    public function getPick_up()
+    {
+        return $this->_pick_up;
+    }
+    public function setPick_up($pick_up)
+    {
+        $this->_pick_up = $pick_up;
+    }
+
+    /**
+     * @return dropoff date
+     */
+    public function getDrop_off()
+    {
+        return $this->_drop_off;
+    }
+    public function setDrop_off($drop_off)
+    {
+        $this->_drop_off = $drop_off;
+    }
+
+    /**
+     * @return age integer
+     */
+    public function getAge()
+    {
+        return $this->_age;
+    }
+    public function setAge($age)
+    {
+        $this->_age = $age;
+    }
+
 }
