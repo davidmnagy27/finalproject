@@ -101,6 +101,7 @@ $f3->route('GET|POST /admin', function($f3)
 $f3 ->route('GET|POST /contact', function() {
     $view = new Template();
     echo $view ->render('views/contact.html');
+    session_destroy();
 });
 
 //Run fat free F3
